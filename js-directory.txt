@@ -1,0 +1,486 @@
+"backgroundColor"
+
+		‫-----------------------------------‬
+
+==                     25=="25"  فقط محتوا باید برابر باشه ؛  
+===                          هم محتوا هم دیتاتایپ رو چک میکنه
+
+!=                                        نامساوی فقط محتوا
+!==                                نامساوی محتوا و دیتاتایپ
+if(!user[item1]){                   اگر یوزر[آیتم۱] نبود!شرط اجرا کن
+
+}
+و 	&&
+یا	||
+	     <-=-=-=-=-=-=-=-=-=-=-= MATH -=-=-=-=-=-=-=-=-=-=->
+Var x = 10;
+Var y = 20;
+
+x + y  -=-=-=-=-=->   هیچ اتفاقی نیافتاده‫!‬
+x = x + y -=-=-=-= > باید در یجا ذخيره شود
+Z = x + y -=-=-= >  فرق ندرارد
+
+	     <-=-=-=-=-=-=-=-=-=-=-=MATH-=-=-=-=-=-=-=-=-=-=->
+
+
+                            DOM
+------------------------- Math methods -------------------------
+Math.abs()                              قدر مطلق
+Math.floor()                رو به پایین گرد میکنه
+Math.ceil()                    رو به بالا گرد میکنه
+Math.round()          اعشار ۰ تا ۴ به سمت پایین. ۵تا ۹ به سمت بالا
+Math.sqrt()                جذر
+Math.min()
+Math.max()
+Math.random()                   [0,1)یک عدد تصادفی در بازه
+Math.floor(Math.random() *37 + 30)                  یه عدد تصادفی از ۳۰تا ۶۶(چون عدد آخر رو به پایین گرد میشه)
+
+
+
+
+window.document
+*---------------------- selectors ------------------------*
+
+
+document.queryselector("..")                     یک کلاس
+document.queryselectorAll("..")               چند المان
+** میتونیم روی یک متغیر هم کوئری سلکتورها را بزنیم فرقی نمیکند ‪**‬
+document.getElementById("..")             گرفتن یک ای دی
+
+Const list = doc.querySelector('ul');
+log(list.)
+log(list.childNodes)  هم تکست و هم فضای خالی رو میشمره
+log(list.childElementCount)  فقط تعداد بچه هارو میگه
+log(list.childeren)     فقط بچه هایی که المان هستند رو برمیگردونه
+This.removeChild(inp)    بهش یه نود پاس میدیم و برامون حذفش میکنه
+This.replaceChild('test','inp')   تست رو جایگزین اینپ میکنه
+
+Var.onclick=function(){..}    addEventListener استفاده بجای
+
+
+p.getAttribute("href")                       اتریبیوتش رو میگیریم
+p.setAttribute("class","test")                     تغییر ولیو کلاس
+
+
+
+Window.pageXOffset   اسکرول افقی
+Window.pageYOffset   اسکرول عمودی
+.offsetTop           موقعیت المان های رو صفحه
+Console.log(var.offsetTop)  الان موقعیت متغیر مورد نظر را بصورت عدد چاپ میکنه‫.‬
+ 
+----------------------------- loops ------------------------------
+while()
+dowhile
+for(let i=0;i<..;i++){};
+Const nums = [..];
+for(num in nums){};
+for(num of nums){};
+nums.foreach(func(item, index, array){});
+nums.map(func(item, index, array){});
+
+-------------
+Const users = [
+{id: 1, name: 'a', age: 22},
+{id: 2, name: 'b', age: 19},
+{id: 3, name: 'c', age: 10},
+{id: 4, name: 'd', age: 30},]
+
+Users.find(func(item){
+ return item.id
+‫{‬);
+==>
+Let target = Users.find(func(item){
+ return item.id == 4
+})
+log(target) --->  خانه چهارم از آرایه را به ما نشون میده
+(میره فقط بدونه پیدا میکنه)
+
+	----------
+
+Let target = Users.filter(func(item){
+ return item.age > 10
+})
+users.filter(item=>item.name)  (اگر لیستی وجود داشته باشد درون یک متغر، و اگر آن لست دارای 'نام' باشد)
+log(target) ----> سه تا ابجکت که سن بالای ۱۰است نشون میده
+(میره چندتا پیدا میکنه)
+
+
+*------------------- classes --------------------*
+{}:  object
+or a bluck.
+
+const newObject = {}
+==
+const newObject = new object()
+newObject.name = 'name' =>  newObject{ name: 'name'}    اضافه کردن
+delet newObject.name  =>  newObject{ }    پاک کردن
+newObject.name.push('myname') => newObject{ name: 'myname'}
+keys -->  let eachKeys = Object.keys(newObject)  => 'name'
+values -->  let eachValues = Object.values(newObject)  => 'myname'
+entries -->  let eachEntries = Object.entries(newObject)  => ['name','myname']
+
+filter
+
+*------------------- function's methods --------------------*
+
+			‫------‬js events------
+‫.‬addEventLIstenner()    برای فراخوانی هر المان در صفحه
+var.addEventListener("click",show)                             اجرای فانکشن بعد از کلیک دوی متغیر
+
+input.addEventListener("keydown",show)                   دستت روی کلید میذاری فانکشن اجرا میشه
+input.addEventListener("keyup",show)         دستت از روی کلید برمیداری فانکشن اجرا میشه(بهتره)
+input.addEventListener("submit",show) 
+
+input.value                     نمایش محتوای درون اینپوت
+
+indexOf  =-=-=-=-=-=-=-=- ?
+
+document.createElement("li")                    یه لیست برام بساز
+doc.creatTextNode('this is a div');
+ul.appendChild(list or a node in each list)       به متغیر یوال یک فرزند ال آی اضافه کن‫-‬ودودی از نوع (node) میگیرد
+var.parentElement    				المان پدر یا یک المان بالاتر‫..‬
+This.parentElement.remove();    باشد‫.‬ ul li که میتواند thisالمان پدر
+
+
+this.classList.add("show");                     افذودن کلاس شو ‫(‬فقط تو هر دستور یک کلاس میشه داخل پرانتز نوشت‫)‬
+this.classList.remove("show");                                           show حذف کلاس 
+this.classList.toggle("show");                                   show افزودن و حذف کلاس
+if(items.classList.contains('active'));				اگر آیتم شامل کلاس اکتیو بود‫..‬
+			or
+newElement.classList.replace("show","hide");                   show جایگزین کلاس هاید بجای کلاس 
+			...
+newElement.className = 'test sample demo';               یه رشته میگیرد که میتونیم اسم کلاس هایی که میخوایم رو بنویسیم و با یه فاصله اسمهارو جدا کنیم مثلا برای کلاسهای بوت استرپ کاربردیه
+
+setTimeout(function,delay)                                  اجرای فانکشن بعد از فلان ثانیه
+setInterval(function,delay)                                  اجرای فانکشن فلان ثانیه یکبار
+
+clearInterval()
+
+ میگرده ببینه ما به فانکشن چچیزی را فرستادیم.مثلا اگر   	    		              Event یا e در فانکشن:
+قراره کاربر دکمه خاصا بزنه میگرده ببینه چه دکمه ای   						 
+کاربر فشارداده و میتونیم روی آنچیزی که فشار داده بود، با توجه به					
+ متدهایی که وجود وارد، دستوري که میخواهیم صادر کنیم با					
+					فانکشن ها یا شرطهای مختلف.					
+
+ 						
+e.stopPropagation()         باعث میشه المان فرزند از پرنت پیروی نکند
+e.preventDefault()			از اتفاق دیفالت جلوگیری کن
+
+
+Var.arguments
+console.log(arguments)  فقط در فانکشن کار میکند
+                        هر متغیری را  برامون میذاره تو آرایه *
+                        درصورتی که خود فانکشن (چی) شده باشه *
+                        برای نشون دادن راحت اعضای متغیر(حتی بصورت تکی تکی)
+
+
+		‫----------------‬
+		 arrow functions
+پرانتز ، فلش ، آکولاد
+() => {
+ ...
+};
+-----
+Let test = () => {
+ ...
+}
+test() فراخوانی
+			‫------‬
+قانون: اگر، اروفانکشن ما فقط یک خط داشت، که آن یک خط (return)بود.میتونیم اینجوری بنویسیم:
+addEventLIstener('click',func(e){
+ return x
+}; ==> addEventListener('click',() => x);
+
+حالا، اگر فقط یک یک ورودی داری اینطوری بنویس:
+addEventListener('click', e => x);
+پ ن: فقط وقتی یک ورودی داریم میتونیم پرانتز نذاریم. اگه دو ورودي یا صفر ورودی داشته باشيم باید پرانتز رو بذاریم.
+
+
+
+اما‪;‬ اگر در ارو فانکشن از (this) استفاده کنیم،به دو مالک بالاتر اشاره میکند بجاي یکی!
+*------------------- array's methods ---------------------*
+arr.push(50)                           افزودن ۵۰ به آخر آرایه
+arr.unshift(50)                        افزودن ۵۰ به اول آرایه
+arr.pop()                               حذف ۵۰ از آخر آرایه
+arr.shift()                             حذف ۵۰ از اول آرایه
+            -------------------------------
+log(arr.push())
+log(arr.pop())
+log(arr.unshift())
+log(arr.shift())
+**(در متد های pop و shift توی پرانتز‪()‬ چیزی نمینویسیم.آرگومان ورودی ندارند)**
+            -------------------------------
+		------------------
+arr1.concat(arr2)--->  arr1 = arr1.concat(arr2);
+		------------------
+console.log(arr.sort())           ارایه رو به ترتیب الفابت میچینه و نشون میده
+اگه بخواین به ترتیب عدد آرایه رو نشون بده فانکشن میزنیم
+log(arr.sort(a,b)=>a-b)                           به ترتیب صعودی
+log(arr.sort(a,b)=>a+b)                          به ترتیب نزولی
+            -------------------------------
+log(arr.slice(2, 5)	از خونه دوم(سوم) تا قبل از خونه ششم نمایش میده 
+arr = arr.slice(2, 5) آرایه برابر شد با از خونه سوم تا قبل ازششم	
+arr = arr.slice(2, -1) آرایه برابر شد با از خونه سوم تا خانه یکی مانده به آخری
+arr = arr.slice(2) وقتی اسلایس فقط یک ورودی دارد ‫-->‬ از خانه سوم تا آخر آرایه را نمایش میدهد
+	‫---‬
+log(arr.splice(2,5))                 از خونه سوم ۵ تا برو جلو و نمایش بده
+log(arr.splice(2,1))              تکنیک‫:‬ فقط خانه سوم را نمایش می دهد 
+ ** در splice آرایه هایی که حذف میشن، *کلا از آرایه اصلی هم حذف شدن!! **
+            -------------------------------
+log(arr.join())                   آرایه رو به استرینگ تبدیل میکنه
+log(arr.join(" ")-("@")-("*"))     در متد جوین میتونیم فاصله بین استرینگ را مدیریت کنیم
+log(arr.toString())    همون کار جوین رو میکنه ولی قابلیت مدیریت فاصله را ندارد(متد جوین جدیدتره)
+
+*-------------------- string's method -----------------------*
+log(str.toUperCase())           تمام رشته رو با حروف بزرگ نمایش میده
+log(str.toLowerCase          تمام رشته رو با حروف کوچک نمایش میده
+log(.charAt(2)        خونه سوم رو نشون میده
+log(.charCodeAt(2)     شماره دکمه کیبورد حرف دوم رشته
+log(.fromcharchode(97)   
+console.log(string.fromcharchode(97));   دریافت کاراکتر شماره۹۷    
+.concat() => console.log(user1.concat(suer2))           الان یوزر۲ رو میاد میچسبونه به یوزر۱، مثل جمع کردن
+=> console.log((user1.toLowerCase()).concat(user2.toLowerCase()))
+log(.startsWith("..")          با حرف یا کلمه داخل()شروع شدن
+log(.endsWith("..")            با حرف یا کلمه داخل()تموم شدن
+.indexOf("..")         میگه حرف داخل پرانتز تو کدوم خونس
+.lastIndexOf()                         از آخر بگو چندمیه
+.length                     طول رو میگه،از یک میشمره ،فاصله هلرو هم میشمره
+.replace("user", "ali")      برو توی متغیر به جای کلمه فرضی یوزر بنویس علی
+.trim()                         فاصله ها یا اسپیس های اول و آخر رو برمیداره
+.slice(41,61)                 از خونه یکم تا خونه سوم رو میکنه و نشون میده،خود خونه سوم رو نه!
+.splite(" ");    
+(استرینگ رو به آرایه تبدیل میکنه )
+
+
+
+
+
+
+*------------------ JSON_methods ---------------------*
+JSON     ارتباط فرانت با بک js object notation
+JSON.stringify(..)           محتوى رو به استرینگ تبديل میکنه
+JSON.parse(..)		     محتوی رو به آرایه تبدیل میکنه
+ 
+
+
+
+---------------- AJAX -------------
+ارتباط فرانت با بک بدون ناز به رفرش شدن صفحه
+
+Let xhr = new XMLHttpRequest
+xhr ==> xml http request
+.responseText()		برای نمایش اطلاعات
+
+log(xhr.responseText())
+
+xhr.onload() ‫=‬ func(){log(JSON.parse(xhr.responseText))}			هرزمان که لود شد 
+xhr.onredystatechange = func     		عدد۰تا۴برمیگردونه، ۴یعنی اطلاعات رو دارم‫.‬
+xhr.open('GET/POST','http://felan یا هرآدرسی که میشه داد')	وقتی میخوایم بگیم برو به این آدرس
+xhr.send({name:ali,famili:emami})     	اطلاعاتی که نياز هست به سرور بفرستیم
+
+
+---------- promise -----------
+Const test = new promise(func(res,rej){
+ res('hi')
+ rej('bye')
+});
+ریجکت رو وقتی برگردونه، ارور میده، برای جلوگیری از ارور باید (catch)بزنیم.
+.cath()      برای زمان ارور دادن
+.catch(func(e(->error)){
+  log(e)	 
+})
+
+-------------- fetch --------------
+fetch(address http://...).then(func(res){
+ Return res.json
+}).then(func(data){
+ log(data)
+}).catch(func(e){
+ log(e)
+})
+-------
+
+await: (=then)
+اول باید داخل تابع باشد، و تابع ما(async)باشد تا await کار کند
+async func sample(){
+  Const x = await fetch('address');
+  Const response = await x.json();
+  Log(response) -->		الان جواب بطور کامل برگشته‫.‬pending نیست‫.‬
+}
+----------------------- try - catch -----------------------
+برای کنترل أردن ارورها:
+try{
+
+}catch(error){
+ log(error)
+}
+
+------------------------------ class --------------------------
+class myClass{
+ constructor(name, family){
+  This.name=name,
+  This.family=family
+ }
+ detail(){
+  return `$I am {this.name} ${this.family}
+ }
+}
+--------------
+class teacher extends myClass {
+    constructor(name, family, curse) {
+        super(name, family);
+        this.curse = curse;
+    }
+    teacherDetail() {
+        return `${this.detail()} , I teach ${this.curse}.`
+    }
+}
+
+const t1 = new teacher('ali', 'emami', 'math');
+
+console.log(t1.teacherDetail());---> I am ali emami , I teach math
+
+-----------------
+
+Date()   تاریخ همین لحظه‫(‬ایران‫)‬
+const date = new Date()
+Log(date.)
+
+------------------
+
+Set()		برای حذف کردن آیتمهای تکراری در آرایه
+Const a = [1,2,3,1,2]
+Const unique = new Set(a)
+Log(unique)---->[1,2,3]  یه کالکشن غیر تکراری برمیگردونه
+
+------------------
+
+
+======= IMPORT-EXPORT ========
+<scripte src='dovomi.js' type='module'>
+import name/arr from 'file.js';
+import{... , ... , ...} from 'file.js';
+export{... , ... , ...};
+export default name/arr;  	برای ‫(‬فقط‫)‬یک چیز،چندتا نمیگیره‫!‬
+
+
+
+
+---------------------- extra
+new   تعرف یک شیء جديد ‫-‬ یعنی یک نمونه از این تابع رو به ما بده
+
+parseFloat & toFixed().  برای ارقام اعشاردار، تا چند رقم
+
+Return   برا خروجی گرفتن از فانکشن‫ .‬ وقتی فانکشن بخوام یه جواب برگردونه
+
+اشاره گر (به اولين مالك). داخل خود توابع یا کلاسها از این استفاده میشود this
+
+target    دسترسی های زیادی میده
+
+func(func)		callback_Function  
+
+Typeof  نوع استرینگ مسترینگ
+Console.log(typeof felan)
+Prototype
+
+
+f2 = نمايش كلمه های مشابه
+
+extends		به ارث بردن، در کلاس ها
+spread(...var)
+Reference type
+
+
+
+
+
+
+
+
+
+
+‫========================‬ BOOTSTRAP CLASSES ======================
+------- responsive -----
+Container
+Container-fluid
+
+----- row-col ------
+Row  => d-flex flex wrap
+Col  col-1 col-12å
+Col  sm-12 m-6 xl-
+------ form ------
+
+
+----- table -----
+
+
+----- flex ------
+D-flex
+Flex-wrap
+Justify-content-center
+Justify-content-between
+Align-items-center
+
+-----button------
+btn btn-primary or btn-outline-primary
+
+------ colors ---------
+Primary
+Secondary
+Danger
+Info
+Success
+Warning
+Light
+Dark
+
+
+-------- style --------
+Text-muted
+
+
+
+============================= GithuB ==============================
+
+shortcut
+git add .
+git add img/ src/ css/
+git status            (وضعیت موجود گیت) اطلاع گیت رو میده کاربرد بالا
+git log     آخرین عملیات
+q      خارج شدن
+clear   کدهارو پاک میکنه
+.md     برای فایل های فرستادنی
+
+
+git init
+
+
+git branch -M "main"
+git branch  لیست برن چارو نشون میده با
+
+git commit -m "first commit added"
+how much changes have files
+
+
+git push -u origin main   اینو که بزنیم فایل یا فلدرمون رفته رو گیتهاب(و گیتهاب رفرش کنی فایل میاد)
+
+
+---------------------------------------- اضافه کردن بعد از تغییرات
+git add style.css
+git commit -m "first change added"
+git push
+
+---------------------------------------- اضافه کدن فایل به فایلهای قبلی
+
+=================== Git =================
+
+----------------branch--------------
+-ohmyzsh-
+
+عوض کردن برنچ:   git ckekout ---> اول روی شاخه ی (مستر)است
+----> git checkout harchi ---> الان روی شاخه یه(هرچی) است
+
+-----------------merge---------------
+اول که میریم توی شاخه ی (مستر)
+بعد از توی مستر (مرج) میکنیم
+git merge harchi      
